@@ -44,7 +44,7 @@ const configuration = {
 const callback = function(err, res) {
   if (err) {
     console.log(err.message);
-    return;
+    return
   }
 
   res.images.forEach(image => {
@@ -57,7 +57,7 @@ const callback = function(err, res) {
         }
       }
     );
-  });
+  })
 
   res.files.forEach(file => {
     fs.writeFile(
@@ -69,7 +69,7 @@ const callback = function(err, res) {
         }
       }
     );
-  });
-};
+  })
+}
 
 favicons(source, configuration, callback);

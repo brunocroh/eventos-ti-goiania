@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-import { Location } from '@reach/router';
-import schemaGenerator from 'helpers/schemaGenerator';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
+import { Location } from '@reach/router'
+import schemaGenerator from 'helpers/schemaGenerator'
 
 const Head = ({
   siteTitle,
@@ -15,7 +15,7 @@ const Head = ({
   social,
   imageUrl,
   location,
-  canonical = siteUrl + (location.pathname || ''),
+  canonical = siteUrl + (location.pathname || '')
 }) => (
   <Helmet>
     <html lang="en" />
@@ -158,12 +158,12 @@ const Head = ({
           siteUrl,
           pageTitle,
           siteTitle,
-          pageTitleFull,
+          pageTitleFull
         })
       )}
     </script>
   </Helmet>
-);
+)
 
 Head.propTypes = {
   siteTitle: PropTypes.string,
@@ -176,8 +176,8 @@ Head.propTypes = {
   canonical: PropTypes.string,
   pageTitle: PropTypes.string,
   pageTitleFull: PropTypes.string,
-  location: PropTypes.object.isRequired,
-};
+  location: PropTypes.object.isRequired
+}
 
 const HeadWithQuery = props => (
   <StaticQuery
@@ -206,6 +206,6 @@ const HeadWithQuery = props => (
       </Location>
     )}
   />
-);
+)
 
-export default HeadWithQuery;
+export default HeadWithQuery
